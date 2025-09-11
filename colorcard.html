@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Cards | Yarn Manufacturer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b35b28;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #b35b28;
+    }
+
+    .btn-contact {
+      background: #b35b28;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-contact:hover {
+      background: #8a421d;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1562059390-a761a084768e') no-repeat center center/cover;
+      height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Color Cards Section */
+    .section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #b35b28;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #ffcc80;
+    }
+
+    .overlay p {
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Yarn Manufacturer</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="color-cards.html">Color Cards</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <a href="#contact" class="btn-contact">Contact Us</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore Our Color Cards</h1>
+      <p>Six unique fabric collections designed with nature, quality, and sustainability in mind.</p>
+    </div>
+  </section>
+
+  <!-- Color Cards -->
+  <section class="section">
+    <h2>Fabric Types & Color Collections</h2>
+    <div class="cards">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600718372857-e08f9dca7fb0" alt="Cotton">
+        <div class="overlay">
+          <h3>Organic Cotton</h3>
+          <p>Soft, breathable, and naturally dyed. Perfect for everyday wear and sustainable textiles.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1620799139504-8a9c14f1f78b" alt="Bamboo">
+        <div class="overlay">
+          <h3>Bamboo Fabric</h3>
+          <p>Eco-friendly, antibacterial, and silky smooth with earthy natural colors.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716a" alt="Hemp">
+        <div class="overlay">
+          <h3>Hemp Yarn</h3>
+          <p>Durable, breathable, and sustainable with rustic earthy tones.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615473427913-9cf8443c2d4b" alt="Silk">
+        <div class="overlay">
+          <h3>Natural Silk</h3>
+          <p>Luxurious, shiny, and elegant. Available in classic natural palettes.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1611504496688-7a5df6a3e975" alt="Recycled Polyester">
+        <div class="overlay">
+          <h3>Recycled Polyester</h3>
+          <p>Made from recycled plastics, offering vibrant shades while reducing waste.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605647540919-89d4efce8f2b" alt="Wool">
+        <div class="overlay">
+          <h3>Natural Wool</h3>
+          <p>Warm, resilient, and timeless. Crafted in soft, earthy, and bold shades.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Yarn Manufacturer. All Rights Reserved.</p>
+    <p>Crafted with sustainable colors 🌱</p>
+  </footer>
+
+  <script>
+    // Example JS - You can expand for interactivity later
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        alert("Explore more about: " + card.querySelector('.overlay h3').innerText);
+      });
+    });
+  </script>
+</body>
+</html>
